@@ -1,0 +1,25 @@
+jobs:
+- name: initial-job
+  public: true
+  plan:
+  - task: simple-task
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source: { repository: busybox }
+      run:
+        path: echo
+        args: ["Hello, HAL1!"]
+- name: level-9000-job
+  public: true
+  plan:
+  - task: simple-task
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source: { repository: busybox }
+      run:
+        path: echo
+        args: ["Hello, HAL!"]

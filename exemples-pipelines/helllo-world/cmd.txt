@@ -1,0 +1,6 @@
+Lancer le coucourse
+>> docker-compose up -d
+
+d:\concourse\fly.exe --target tutorial login --concourse-url http://127.0.0.1:8090 -u test -p test
+d:\concourse\fly.exe --target tutorial sync
+d:\concourse\fly.exe -t tutorial set-pipeline --pipeline exe1--config pipeline.yml

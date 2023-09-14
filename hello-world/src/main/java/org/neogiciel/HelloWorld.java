@@ -34,5 +34,12 @@ public class HelloWorld {
 
     }
 
+    @GET
+    @Path("/push")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String push() {
+        return "Push";
+    }
+
 
 }
